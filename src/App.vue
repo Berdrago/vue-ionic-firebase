@@ -11,17 +11,14 @@ import { ref } from 'vue';
 
 //Aqui importare axios para validar Usuarios
 import axios from "axios";
-
-
-  
-
-
-
+const ENDPOINT_PATH = "https://reqres.in/api/";
 //AQUI IMPORTARE FCM PARA  HACER LA CONEXION EN FIREBASE 
 import { FCM } from "capacitor-fcm";
  const fcm = new FCM();
 import { Plugins} from '@capacitor/core';
 const { PushNotifications } = Plugins;
+
+
 
 
 export default defineComponent({
@@ -31,15 +28,16 @@ export default defineComponent({
     IonRouterOutlet
   },
   methods:{
+    
     register(email: any, password: any) {
     const user = { email, password };
-    const ENDPOINT_PATH = "https://reqres.in/api/";
-    return axios.post(ENDPOINT_PATH + "register", user);
+    return axios.post(ENDPOINT_PATH + "regiser", user);
   },
-  data: () => ({
-
-  })
-
+  login(email: any, password: any) {
+    const user = { email, password };
+    return axios.post(ENDPOINT_PATH + "login", user);
+  }   
+    
   },
   });
   
@@ -59,6 +57,9 @@ export default defineComponent({
         };
         
   };
+  
+
+  
   
   
   

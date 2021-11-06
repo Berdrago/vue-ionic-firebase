@@ -10,7 +10,7 @@
       </ion-toolbar>
     </ion-header>
     <ion-content  class="login">
-        <form action  @submit.prevent="login">
+        <form action  v-on:submit.prevent="login">
             <ion-item class="centrado" > 
                 <ion-label position="floating" class="rojo" for="#email" >Correo de Usuario</ion-label>
                 <ion-input  v-model="email" type="email" id="email" required placeholder="Email" ></ion-input>
@@ -19,7 +19,7 @@
                 <ion-label position="floating" class="rojo" for="#password"  >Contraseña</ion-label>
                 <ion-input v-model="password" type="password" id="password"  required placeholder="Password"></ion-input>
             </ion-item>
-            <ion-button  expand="full" fill="outline" class="espacio"  style="margin: 50px" color="danger" type="submit"  > Login</ion-button>
+            <ion-button  expand="full" fill="outline" class="espacio"  style="margin: 50px" color="danger" type="submit" @click="() => router.push('/menu')" > Login</ion-button>
             <ion-button  expand="full" fill="outline" class="espacio" createRouter  color="danger" @click="() => router.push('/register')"  > CrearCuenta</ion-button>
         </form>
     </ion-content>
@@ -27,10 +27,10 @@
 </template>
 
 <script lang="ts">
-import { IonContent,IonItem,  IonPage,IonButton,IonLabel,IonInput,IonTitle,IonBackButton, IonButtons,IonToolbar,
-    IonHeader } from '@ionic/vue';
+import { IonContent,IonItem,  IonPage,IonButton,IonLabel,IonInput,IonTitle,IonBackButton, IonButtons,IonToolbar, IonHeader } from '@ionic/vue';
 import { defineComponent } from 'vue';
 import { useRouter } from 'vue-router';
+import axios from 'axios';
 
 
 export default defineComponent({
@@ -58,12 +58,35 @@ export default defineComponent({
     login() {
       console.log(this.email);
       console.log(this.password);
+      const json ={
+        "usuario":this.email,
+        "clave":this.password
+      };
+      axios.post('http://solodata.es/auth', json)
+      .then( data => {
+        console.log(data);
+        if (data.data.status == "Ok"){
+          console.log("Todo Okey");
+           localStorage.token = data.data.result.token;
+            this.$router.push('/menu');
+          
+        }else{
+          this.error = true;
+        }
+        
+      })
+      
     }
+  
   },
   setup() {
       const router = useRouter();
       return { router };
     }
   
+  
 });
+
+
+
 </script>

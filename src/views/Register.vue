@@ -64,8 +64,11 @@ export default defineComponent({
       console.log(this.password);
       console.log(this.passwordRepeat);
       
-    }
+    },
+    
+    
   }
+  
   
 });
 </script>
