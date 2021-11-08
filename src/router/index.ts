@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Menu from '../views/Menu.vue'
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
+import Lista from '../views/Lista.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -38,9 +39,18 @@ const routes: Array<RouteRecordRaw> = [
     redirect: '/register'
   },
   {
-    path: '/register',
-    name: 'Register',
+    path: '/lista',
+    name: 'Lista',
     component: Register
+  },
+  {
+    path: '/',
+    redirect: '/lista'
+  },
+  {
+    path: '/lista',
+    name: 'Lista',
+    component: Lista
   },
 ]
 

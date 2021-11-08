@@ -25,6 +25,23 @@
       </ion-content>
     </ion-menu>
     <ion-router-outlet id="main"></ion-router-outlet>
+    <ion-content  class="login">
+        <form action  @submit.prevent="login">
+            <ion-item class="centrado" > 
+                <ion-label position="floating" class="rojo" for="#producto" >Producto</ion-label>
+                <ion-input  v-model="producto" type="string" id="producto" required placeholder="Ingresa Nombre de producto" ></ion-input>
+            </ion-item>
+            <ion-item class="centrado"> 
+                <ion-label position="floating" class="rojo" for="#cproducto"  >Cantidad</ion-label>
+                <ion-input v-model="cproducto" type="number" id="cproducto"  required placeholder="Ingresa la cantidad de productos"></ion-input>
+            </ion-item>
+            <ion-item class="centrado"> 
+                <ion-label position="floating" class="rojo" for="#cateproducto"  >Cantidad</ion-label>
+                <ion-input v-model="cateproducto" type="string" id="cateproducto"  required placeholder="Ingresa nombre de la cataegoria"></ion-input>
+            </ion-item>
+            <ion-button  expand="full" fill="outline" class="espacio"  style="margin: 50px" color="danger" type="submit" @click="() => r " > Crear Producto</ion-button>
+        </form>
+    </ion-content>
   </ion-page>
 </template>
 
@@ -40,10 +57,14 @@ import {
   IonTitle, 
   IonToolbar,
   menuController,
+  IonLabel,
+  IonButton,
+  IonInput
 } from '@ionic/vue';
 import { defineComponent } from 'vue';
 import { handRightOutline,reorderThreeOutline} from 'ionicons/icons'
 import { App } from '../App.vue';
+
 
 
 
@@ -59,11 +80,24 @@ export default defineComponent({
     IonRouterOutlet,
     IonTitle, 
     IonToolbar,
+    IonLabel,
+    IonButton,
+    IonInput
   },
-  
+  data: () => ({
+    producto: "",
+    cproducto: "",
+    cateproducto:"",
+  }),
+  methods: {
+    login() {
+      console.log(this.producto);
+      console.log(this.cproducto);
+      console.log(this.cateproducto)
+    }
+  },
     setup (){
     const  {Catproductos} = App ()
-    
     menuController.enable(true, 'first');
     menuController.open('first');
     return {
@@ -72,6 +106,9 @@ export default defineComponent({
       menuController,
       reorderThreeOutline
     }
+    
   }
+
+  
 });
 </script>
