@@ -36,11 +36,12 @@
                 <ion-input v-model="cproducto" type="number" id="cproducto"  required placeholder="Ingresa la cantidad de productos"></ion-input>
             </ion-item>
             <ion-item class="centrado"> 
-                <ion-label position="floating" class="rojo" for="#cateproducto"  >Cantidad</ion-label>
+                <ion-label position="floating" class="rojo" for="#cateproducto"  >Categoria</ion-label>
                 <ion-input v-model="cateproducto" type="string" id="cateproducto"  required placeholder="Ingresa nombre de la cataegoria"></ion-input>
             </ion-item>
-            <ion-button  expand="full" fill="outline" class="espacio"  style="margin: 50px" color="danger" type="submit" @click="() => r " > Crear Producto</ion-button>
+            <ion-button  expand="full" fill="outline" class="espacio"  style="margin: 50px" color="danger" type="submit"  > Crear Producto</ion-button>
         </form>
+        <ion-button  expand="full" fill="outline" class="espacio"  color="danger" type="submit" @click="() => router.push('/lista')" > Lista de Productos</ion-button>
     </ion-content>
   </ion-page>
 </template>
@@ -64,7 +65,7 @@ import {
 import { defineComponent } from 'vue';
 import { handRightOutline,reorderThreeOutline} from 'ionicons/icons'
 import { App } from '../App.vue';
-
+import { useRouter } from 'vue-router';
 
 
 
@@ -100,15 +101,17 @@ export default defineComponent({
     const  {Catproductos} = App ()
     menuController.enable(true, 'first');
     menuController.open('first');
+    const router = useRouter();
     return {
       Catproductos,
       handRightOutline,
       menuController,
-      reorderThreeOutline
+      reorderThreeOutline,
+      router 
     }
     
+    
   }
-
   
 });
 </script>
