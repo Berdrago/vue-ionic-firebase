@@ -39,8 +39,8 @@ const routes: Array<RouteRecordRaw> = [
     redirect: '/register'
   },
   {
-    path: '/lista',
-    name: 'Lista',
+    path: '/register',
+    name: 'Register',
     component: Register
   },
   {

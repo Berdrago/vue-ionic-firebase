@@ -30,9 +30,9 @@
 </template>
 
 <script lang="ts">
-import { IonContent,IonItem,  IonPage,IonButton,IonLabel,IonInput,IonTitle,IonBackButton, IonButtons,IonToolbar,
-    IonHeader } from '@ionic/vue';
+import { IonContent,IonItem,  IonPage,IonButton,IonLabel,IonInput,IonTitle,IonBackButton, IonButtons,IonToolbar,IonHeader } from '@ionic/vue';
 import { defineComponent } from 'vue';
+
 
 
 
@@ -59,13 +59,11 @@ export default defineComponent({
   }),
   methods: {
     register() {
-        
       console.log(this.email);
       console.log(this.password);
       console.log(this.passwordRepeat);
       
     }
-  }
-  
+  } 
 });
 </script>

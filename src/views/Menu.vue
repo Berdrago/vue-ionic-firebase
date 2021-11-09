@@ -27,15 +27,15 @@
     <ion-router-outlet id="main"></ion-router-outlet>
     <ion-content  class="login">
         <form action  @submit.prevent="login">
-            <ion-item class="centrado" > 
+            <ion-item  > 
                 <ion-label position="floating" class="rojo" for="#producto" >Producto</ion-label>
                 <ion-input  v-model="producto" type="string" id="producto" required placeholder="Ingresa Nombre de producto" ></ion-input>
             </ion-item>
-            <ion-item class="centrado"> 
+            <ion-item > 
                 <ion-label position="floating" class="rojo" for="#cproducto"  >Cantidad</ion-label>
                 <ion-input v-model="cproducto" type="number" id="cproducto"  required placeholder="Ingresa la cantidad de productos"></ion-input>
             </ion-item>
-            <ion-item class="centrado"> 
+            <ion-item > 
                 <ion-label position="floating" class="rojo" for="#cateproducto"  >Categoria</ion-label>
                 <ion-input v-model="cateproducto" type="string" id="cateproducto"  required placeholder="Ingresa nombre de la cataegoria"></ion-input>
             </ion-item>
