@@ -1,7 +1,6 @@
-# vue-ionic-firebase
+# Proyecto vue-ionic-firebase
 
 
-## Proyecto vue-ionic-firebase
 # Requisitos
 Instalar node js
 Instalar Ionic 
