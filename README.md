@@ -40,7 +40,7 @@ ionic cap sync
 
 ````
 
-#Author
+## Author
 Dread/Berdrago
 
 
