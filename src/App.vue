@@ -29,7 +29,7 @@ export default defineComponent({
     register(email: any, password: any) {
     const user = { email, password };
     const ENDPOINT_PATH = "";
-    return axios.post(ENDPOINT_PATH + "register", user);
+    return axios.post(ENDPOINT_PATH + "register", user);  
   },
   
   data: () => ({
