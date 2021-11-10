@@ -1,4 +1,6 @@
 # vue-ionic-firebase
+# # Aplicacion Hibrida
+# Proyecto vue-ionic-firebase
 # Requisitos
 Instalar node js
 Instalar Ionic 
@@ -38,16 +40,11 @@ ionic cap sync
 
 ````
 
-## Usage
+## Objetivos de la Aplicacion
 
-Objetivos de la Aplicacion
+
 Crear aplición híbrida con framework ionic
 Conectar aplicación con Firebase y generar notificación Push
-
-````
-
-Aplicacion Hibrida
-Proyecto vue-ionic-firebase
 
 
 #Author
