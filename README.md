@@ -3,6 +3,10 @@
 Header H1 is used to display the Project heading. 
 
 ## Aplicacion Hibrida
+#Requisitos 
+Instalar node js
+Instalar Ionic 
+Instalar visual studios o Editor de codigo a preferencia 
 ## Proyecto vue-ionic-firebase
 
 ````
