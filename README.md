@@ -1,12 +1,11 @@
 # vue-ionic-firebase
-# Header H1
-Header H1 is used to display the Project heading. 
-
-## Aplicacion Hibrida
-#Requisitos 
+# Requisitos
 Instalar node js
 Instalar Ionic 
 Instalar visual studios o Editor de codigo a preferencia 
+
+## Aplicacion Hibrida
+
 ## Proyecto vue-ionic-firebase
 
 ````
