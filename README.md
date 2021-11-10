@@ -4,13 +4,15 @@ Header H1 is used to display the Project heading.
 
 ## Aplicacion Hibrida
 ## Proyecto vue-ionic-firebase
-Sub Topic Headings H2 is used for sub sections like Configurations, Authors etc.
 
 ````
 #--------------Crear Proyecto----------------
 ionic start vue-ionic-firebase  blank --type vue
+````
+````
 --------------Levantar servicio-------------
 ionic serve 
+````
 ionic serve -lab
 --------------Integrar Capacitor----------------
 ionic integrations enable capacitor 
