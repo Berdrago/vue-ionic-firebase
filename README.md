@@ -40,13 +40,6 @@ ionic cap sync
 
 ````
 
-## Objetivos de la Aplicacion
-
-
-Crear aplición híbrida con framework ionic
-Conectar aplicación con Firebase y generar notificación Push
-
-
 #Author
 Dread/Berdrago
 
